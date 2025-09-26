@@ -1,28 +1,172 @@
-/* RESET GENERALE */
+/***********************
+    REGOLE GENERALI 
+************************/
 
+/** Reset Pagina */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/** Stile generale */
 html {
   font-size: 12px;
 }
 
 body {
   min-height: 100vh;
-  /* font-family: ; */
-  /* font-size: 1rem; */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+a {
+  text-decoration: none;
 }
 
-/* CLASSI RIUTILIZZABILI */
+ul {
+  list-style-type: none;
+}
+
+h2 {
+  padding: 20px 0;
+}
+
+/***************************
+    CLASSI RIUTILIZZABILI 
+****************************/
+
+/** Contenitori */
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 70%;
+}
+
+/** Regole Flexbox */
+.flex-container-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-aroud {
+  justify-content: space-around;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.gap-20 {
+  gap: 22px;
+}
+
+/** Colori Testo */
+.text-white {
+  color: white;
+}
+
+/************
+    HEADER 
+************/
+header {
+  height: 90px;
+}
+
+/* Logo */
+#logo-small {
+  width: 60px;
+}
+
+/************
+    MAIN 
+************/
+
+/** Sezione contenuto da aggiungere */
+.section-content {
+
+  /* Debug */
+  height: 100px;
+  line-height: 100px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+}
+
+/** Barra di navigazione main */
+.nav-main {
+  height: 150px;
+  line-height: 150px;
+  background-color: #0282F9;
+}
+
+.img-nav-main {
+  max-width: 40px;
+  max-height: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/************
+    FOOTER 
+************/
+
+/** Footer Top */
+.footer-top {
+  background-image: url(../src/assets/img/footer-bg.jpg);
+  padding: 35px;
+}
+
+.footer-top>div {
+  position: relative;
+}
+
+.footer-top li {
+  color: #7B8086;
+}
+
+.logo-sfondo {
+  max-width: 440px;
+
+  /* Position */
+  position: absolute;
+  bottom: -104px;
+  right: 0;
+  z-index: 0;
+}
+
+/** Footer Bottom */
+.footer-bottom {
+  background-color: #303030;
+  height: 100px;
+
+  /* Position */
+  position: relative;
+  z-index: 1;
+}
+
+.footer-bottom>div {
+  height: 100%;
+}
+
+.bottone-footer-bottom {
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+  border: 1px solid #0282F9;
+}
+
+.follow-us {
+  color: #0282F9;
+  font-size: 1.3rem;
+  font-weight: bold;
+
+  /* Position */
+  position: relative;
+  top: 25%;
 }
