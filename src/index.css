@@ -42,6 +42,11 @@ h2 {
   max-width: 70%;
 }
 
+.container-small {
+  margin: 0 auto;
+  max-width: 50%;
+}
+
 /** Regole Flexbox */
 .flex-container-row {
   display: flex;
@@ -60,8 +65,12 @@ h2 {
   align-items: center;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .gap-20 {
-  gap: 22px;
+  gap: 20px;
 }
 
 /** Colori Testo */
@@ -85,16 +94,22 @@ header {
     MAIN 
 ************/
 
-/** Sezione contenuto da aggiungere */
-.section-content {
-
-  /* Debug */
-  height: 100px;
-  line-height: 100px;
+/** Sezione Card Comics */
+.section-comics {
   font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  background-color: black;
+  padding: 30px;
+  background-color: #1C1C1C;
+}
+
+.container-card-comics {
+  flex-basis: calc((100% - 100px) / 6);
+  max-height: 127px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+
 }
 
 /** Barra di navigazione main */

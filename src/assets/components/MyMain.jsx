@@ -1,3 +1,5 @@
+import comics from "../comics"
+
 /* Definizione componente MyMain */
 function MyMain() {
 
@@ -5,9 +7,18 @@ function MyMain() {
 
         <main>
 
-            {/* Contenuto da riempire */}
-            <section className="section-content">
-                <div className="container"> -- Content goes here -- </div>
+            {/* Sezione card fumetti */}
+            <section className="section-comics ">
+                <div className="container-small flex-container-row flex-wrap gap-20">
+
+                    {/* Card comics */}
+                    {comics.map(comic => (
+                        <div key={comic.id} className="container-card-comics">
+                            <img className="card" src={comic.thumb} alt={comic.series} />
+                        </div>
+                    ))}
+
+                </div>
             </section>
 
             {/* Barra di navigazione */}
