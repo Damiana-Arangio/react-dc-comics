@@ -1,3 +1,4 @@
+import dcCategories from "../data/dcCategories"
 
 /* Definizione componente MyHeader */
 function MyHeader() {
@@ -14,16 +15,13 @@ function MyHeader() {
             {/* BARRA DI NAVIGAZIONE */}
             <nav>
                 <ul className="flex-container-row gap-20">
-                    <li> <a href="#"></a> CHARACTERS </li>
-                    <li> <a href="#"></a> COMICS </li>
-                    <li> <a href="#"></a> MOVIES </li>
-                    <li> <a href="#"></a> TV </li>
-                    <li> <a href="#"></a> GAMES </li>
-                    <li> <a href="#"></a> COLLECTIBLES </li>
-                    <li> <a href="#"></a> VIDEOS </li>
-                    <li> <a href="#"></a> FANS </li>
-                    <li> <a href="#"></a> NEWS </li>
-                    <li> <a href="#"></a> SHOP </li>
+                    {dcCategories.map((dcCategory) => (
+                        <li key={dcCategory.id}>
+                            <a href={dcCategory.url} className={dcCategory.selected ? "active" : ""}>
+                                {dcCategory.label}
+                            </a>
+                        </li>
+                    ))}
                 </ul>
             </nav>
 
