@@ -17,7 +17,7 @@ function MyHeader() {
                 <ul className="flex-container-row gap-20">
                     {dcCategories.map((dcCategory) => (
                         <li key={dcCategory.id}>
-                            <a href={dcCategory.url} className={dcCategory.selected ? "active" : ""}>
+                            <a href={dcCategory.url} className={dcCategory.selected ? "active text-light-blue" : ""}>
                                 {dcCategory.label}
                             </a>
                         </li>

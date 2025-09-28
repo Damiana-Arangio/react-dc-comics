@@ -84,7 +84,7 @@ function MyFooter() {
                     {/* Link Social */}
                     <nav>
                         <ul className="flex-container-row gap-20">
-                            <li> <a href="#" className="follow-us"> FOLLOW US </a> </li>
+                            <li> <a href="#" className="follow-us text-light-blue"> FOLLOW US </a> </li>
                             <li> <a href="#"> <img src="src/assets/img/footer-facebook.png" alt="Logo Facebook" /> </a> </li>
                             <li> <a href="#"> <img src="src/assets/img/footer-twitter.png" alt="Logo Twitter" /> </a> </li>
                             <li> <a href="#"> <img src="src/assets/img/footer-youtube.png" alt="Logo youTube" /> </a> </li>

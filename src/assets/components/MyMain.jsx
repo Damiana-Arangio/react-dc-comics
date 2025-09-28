@@ -7,9 +7,16 @@ function MyMain() {
 
         <main>
 
+            {/* Hero section */}
+            <section className="container hero-section"> </section>
+            
             {/* Sezione card fumetti */}
-            <section className="section-comics ">
-                <div className="container-small flex-container-row flex-wrap gap-15">
+            <section className="section-comics">
+
+                <div className="container-small p-relative flex-container-row flex-wrap gap-15">
+
+                    {/* Etichetta serie attuale */}
+                    <h2 className="label-current-series text-white bg-light-blue"> CURRENT SERIES </h2>
 
                     {/* Card comics */}
                     {comics.map(comic => (
@@ -19,13 +26,13 @@ function MyMain() {
                         </div>
                     ))}
 
-                    <button className="btn-load-more"> LOAD MORE </button>
+                    <button className="btn-load-more bg-light-blue"> LOAD MORE </button>
 
                 </div>
             </section>
 
             {/* Barra di navigazione */}
-            <nav className="nav-main">
+            <nav className="nav-main bg-light-blue">
                 <ul className="container flex-container-row justify-aroud ">
 
                     <li>
