@@ -9,14 +9,17 @@ function MyMain() {
 
             {/* Sezione card fumetti */}
             <section className="section-comics ">
-                <div className="container-small flex-container-row flex-wrap gap-20">
+                <div className="container-small flex-container-row flex-wrap gap-15">
 
                     {/* Card comics */}
                     {comics.map(comic => (
                         <div key={comic.id} className="container-card-comics">
-                            <img className="card" src={comic.thumb} alt={comic.series} />
+                            <img className="card" src={comic.thumb} alt={comic.title} />
+                            <h3 className="text-white"> {comic.series.toUpperCase()} </h3>
                         </div>
                     ))}
+
+                    <button className="btn-load-more"> LOAD MORE </button>
 
                 </div>
             </section>
