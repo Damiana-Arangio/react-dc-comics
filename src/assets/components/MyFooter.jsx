@@ -1,3 +1,8 @@
+import dcComics from "../data/dcComics"
+import shops from "../data/shops"
+import dc from "../data/dc"
+import sites from "../data/sites"
+
 /* Definizione componente MyFooter */
 function MyFooter() {
     return (
@@ -12,55 +17,78 @@ function MyFooter() {
                     {/* Barra di navigazione*/}
                     <nav className="flex-container-row gap-20">
 
-                        {/* DC COMICS e SHOP */}
                         <div>
-                            <h2 className="text-white"> DC COMICS </h2>
-                            <ul>
-                                <li> <a href="#"></a> Characters </li>
-                                <li> <a href="#"></a> Comics </li>
-                                <li> <a href="#"></a> Movies </li>
-                                <li> <a href="#"></a> TV </li>
-                                <li> <a href="#"></a> Games </li>
-                                <li> <a href="#"></a> Videos </li>
-                                <li> <a href="#"></a> News </li>
-                            </ul>
 
-                            <h2 className="text-white"> SHOP </h2>
-                            <ul>
-                                <li> <a href="#"></a> Shop DC </li>
-                                <li> <a href="#"></a> Shop DC Collectibles </li>
-                            </ul>
+                            {/* DC COMICS */}
+                            { dcComics.map((dcComic, index) => (
+                                <div key={"dcComic" + index}>
+                                    <h2 className="text-white"> {dcComic.title} </h2>
+
+                                    {dcComic.linksDcComics.map (linkDcComics => (
+                                        <ul key={linkDcComics.id}>
+                                            <li> 
+                                                <a className="text-grey" href={linkDcComics.url}>
+                                                    {linkDcComics.label}
+                                                </a> 
+                                            </li>
+                                        </ul> 
+                                    ))}
+                                </div>
+                            ))}
+
+                            {/* SHOP */}
+                            {shops.map((shop, index) => (
+                                <div key={"shop" + index}>
+                                    <h2 className="text-white"> {shop.title} </h2>
+
+                                    {shop.linksShops.map(linkShops => (
+                                        <ul key={linkShops.id}>
+                                            <li>
+                                                <a className="text-grey" href={linkShops.url}>
+                                                    {linkShops.label}
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    ))}
+                                </div>
+                            ))}
+
                         </div>
 
                         {/* DC */}
-                        <div>
-                            <h2 className="text-white"> DC </h2>
-                            <ul>
-                                <li> <a href="#"></a> Terms of Use </li>
-                                <li> <a href="#"></a> Privacy policy (New) </li>
-                                <li> <a href="#"></a> Ad Choices </li>
-                                <li> <a href="#"></a> Advertising </li>
-                                <li> <a href="#"></a> Jobs </li>
-                                <li> <a href="#"></a> Subscriptions </li>
-                                <li> <a href="#"></a> Talent Workshops </li>
-                                <li> <a href="#"></a> CPSC Certificates </li>
-                                <li> <a href="#"></a> Ratings  </li>
-                                <li> <a href="#"></a> Shop Help </li>
-                                <li> <a href="#"></a> Contact Us </li>
-                            </ul>
-                        </div>
+                        {dc.map((dcItem, index) => (
+                            <div key={"dc" + index}>
+                                <h2 className="text-white"> {dcItem.title} </h2>
+
+                                {dcItem.linksDc.map(linkDc => (
+                                    <ul key={linkDc.id}>
+                                        <li>
+                                            <a className="text-grey" href={linkDc.url}>
+                                                {linkDc.label}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                ))}
+                            </div>
+                        ))}
 
                         {/* SITES */}
-                        <div>
-                            <h2 className="text-white"> SITES </h2>
-                            <ul>
-                                <li> <a href="#"></a> DC </li>
-                                <li> <a href="#"></a> MAD Magazine (New) </li>
-                                <li> <a href="#"></a> DC Kids </li>
-                                <li> <a href="#"></a> DC Universe </li>
-                                <li> <a href="#"></a> DC Power Visa </li>
-                            </ul>
-                        </div>
+                        {sites.map((site, index) => (
+                            <div key={"sites" + index}>
+                                <h2 className="text-white"> {site.title} </h2>
+
+                                {site.linksSites.map(linkSites => (
+                                    <ul key={linkSites.id}>
+                                        <li>
+                                            <a className="text-grey" href={linkSites.url}>
+                                                {linkSites.label}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                ))}
+                            </div>
+                        ))}
+
                     </nav>
 
                     {/* Immagine logo sfondo */}

@@ -97,6 +97,10 @@ h3 {
   color: #0282F9;
 }
 
+.text-grey {
+      color: #7B8086;
+}
+
 /* Colori sfondo */
 .bg-light-blue {
   background-color: #0282F9;
@@ -202,10 +206,6 @@ header {
 
 .footer-top>div {
   position: relative;
-}
-
-.footer-top li {
-  color: #7B8086;
 }
 
 .logo-sfondo {
