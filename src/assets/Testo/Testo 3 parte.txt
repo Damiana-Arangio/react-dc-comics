@@ -1,0 +1,9 @@
+Descrizione:
+Continuate a lavorare nella stessa repo di ieri e create un nuovo componente riutilizzabile per visualizzare le card dei fumetti, sfruttando l’array di oggetti passato ieri.
+Fate in modo che il componente riceva i dati del singolo fumetto come props.
+
+Nota: Le immagini potrebbero variare leggermente rispetto a quelle nello screenshot.
+
+Bonus: Provare a centralizzare i dati facendoli partire  da App.jsx e passandoli via prop ai vari componenti che li necessitano
+
+Buon divertimento e buon we! 🚐...

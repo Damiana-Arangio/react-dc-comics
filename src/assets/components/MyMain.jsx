@@ -1,4 +1,5 @@
 import comics from "../data/comics"
+import Card from "./Card"
 
 /* Definizione componente MyMain */
 function MyMain() {
@@ -20,10 +21,17 @@ function MyMain() {
 
                     {/* Card comics */}
                     {comics.map(comic => (
-                        <div key={comic.id} className="container-card-comics">
-                            <img className="card" src={comic.thumb} alt={comic.title} />
-                            <h3 className="text-white"> {comic.series.toUpperCase()} </h3>
-                        </div>
+
+                        <Card 
+                            key = {comic.id}
+                            src = {comic.thumb}
+                            alt = {comic.title}
+                            series = {comic.series}
+                        />
+                        // <div key={comic.id} className="container-card-comics">
+                        //     <img className="card" src={comic.thumb} alt={comic.title} />
+                        //     <h3 className="text-white"> {comic.series.toUpperCase()} </h3>
+                        // </div>
                     ))}
 
                     <button className="btn-load-more bg-light-blue"> LOAD MORE </button>
